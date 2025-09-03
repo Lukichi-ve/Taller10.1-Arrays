@@ -38,5 +38,11 @@ function showList(array) {
 
 document.addEventListener("DOMContentLoaded", (e) => {
   // Escribe tu solución aquí
+  function filterStrings(array){
+    return array.filter((elemento) => typeof elemento === "string"); //Cada elemento del array es comparado con un string, si es true lo guarda y sino se descarta.
+  }
+  
+  showList(filterStrings(strangeArray).sort((a, b) => a.localeCompare(b))); //Se muestra en el HTML la lista con solo strings y estos ordenados alfabeticamente.
+
   // Sugerencia de cómo mostrar el array => showList(strangeArray);
 });
